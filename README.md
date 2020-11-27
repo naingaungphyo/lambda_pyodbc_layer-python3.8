@@ -55,9 +55,9 @@ Description = My ODBC Driver 17 for SQL Server
 Trace = No
 EOF
 
-# package the content in a zip file to use as a lambda layer
+## package the content in a zip file to use as a lambda layer
 cd /opt
 zip -r9 ~/pyodbc-layer.zip .
 
-# copy zip file from docker container
+## copy zip file from docker container
 docker cp <containerId>:/opt/pyodbc-layer.zip /home/ec2-user/
