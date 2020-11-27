@@ -1,5 +1,6 @@
 # lambda pyodbc layer for python3.8
-pyodbc lambda layer for python3.8 runtime - built with Amazon Linux 2!
+pyodbc lambda layer for python3.8 runtime - built with Amazon Linux 2!  
+Download zip file and upload in aws lambda Layers.
 
 unixODBC version - 2.3.9 [official link](http://www.unixodbc.org/download.html)  
 Microsoft ODBC Driver 17 - libmsodbcsql-17.6.so.1.1 [official link](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017)
