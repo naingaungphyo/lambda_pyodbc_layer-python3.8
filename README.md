@@ -1,19 +1,22 @@
-# lambda_pyodbc_layer-python3.8
+# lambda pyodbc layer for python3.8
 pyodbc lambda layer for python3.8 runtime - built with Amazon Linux 2!
+
+unixODBC version - 2.3.9 [official link](http://www.unixodbc.org/download.html)
+Microsoft ODBC Driver 17 - libmsodbcsql-17.6.so.1.1 [official link](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017)
 
 The following guide is based on this [gist](https://gist.github.com/diriver63/b72a954fa0da4851d89e5086aa13c6e8)!
 
 ### run docker container
 docker run -it --rm --entrypoint bash -e ODBCINI=/opt/odbc.ini -e ODBCSYSINI=/opt/ lambci/lambda:build-python3.8
 
-ref:https://hub.docker.com/r/lambci/lambda/tags
+ref: https://hub.docker.com/r/lambci/lambda/tags
 
 ### download unixODBC
 curl ftp://ftp.unixodbc.org/pub/unixODBC/unixODBC-2.3.9.tar.gz -O
 tar xzvf unixODBC-2.3.9.tar.gz
 cd unixODBC-2.3.9
 
-ref:http://www.unixodbc.org/download.html
+ref: http://www.unixodbc.org/download.html
 
 ### install unixODBC
 ./configure --sysconfdir=/opt --disable-gui --disable-drivers --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE --prefix=/opt
