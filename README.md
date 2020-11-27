@@ -43,19 +43,21 @@ cd /opt/python/
 pip install pyodbc -t .
 
 ### edit for removing "microsoft" folder
-cat <<EOF > odbcinst.ini  
-[ODBC Driver 17 for SQL Server]  
-Description=Microsoft ODBC Driver 17 for SQL Server  
-Driver=/opt/msodbcsql17/lib64/libmsodbcsql-17.6.so.1.1  
-UsageCount=1  
+```
+cat <<EOF > odbcinst.ini
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/msodbcsql17/lib64/libmsodbcsql-17.6.so.1.1
+UsageCount=1
 EOF
 
-cat <<EOF > odbc.ini  
-[ODBC Driver 17 for SQL Server]  
-Driver = ODBC Driver 17 for SQL Server  
-Description = My ODBC Driver 17 for SQL Server  
-Trace = No  
+cat <<EOF > odbc.ini
+[ODBC Driver 17 for SQL Server]
+Driver = ODBC Driver 17 for SQL Server
+Description = My ODBC Driver 17 for SQL Server
+Trace = No
 EOF
+```
 
 ### package the content in a zip file to use as a lambda layer
 cd /opt  
