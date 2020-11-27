@@ -65,4 +65,6 @@ cd /opt
 zip -r9 ~/pyodbc-layer.zip .
 
 ### copy zip file from docker container
+```
 docker cp <containerId>:/opt/pyodbc-layer.zip /home/ec2-user/
+```
