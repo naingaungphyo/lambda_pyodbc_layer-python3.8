@@ -1,0 +1,19 @@
+prefix=/opt
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+odbcversion=3
+longodbcversion=3.52
+odbcini=/opt/odbc.ini
+odbcinstini=/opt/odbcinst.ini
+ulen=-DSIZEOF_SQLULEN=8
+build_cflags=-DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8
+
+Name: odbc (unixODBC)
+Description: unixODBC Driver Manager library
+URL: http://unixodbc.org
+Version: 2.3.9
+Cflags: -I${includedir}
+Libs: -L${libdir} -lodbc
+Libs.private: $(top_build_prefix)libltdl/libltdlc.la  -lpthread

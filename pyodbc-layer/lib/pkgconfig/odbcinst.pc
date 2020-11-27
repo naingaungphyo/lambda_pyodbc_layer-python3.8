@@ -1,0 +1,12 @@
+prefix=/opt
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: odbcinst (unixODBC)
+Description: unixODBC Configuration Library
+URL: http://unixodbc.org
+Version: 2.3.9
+Cflags: -I${includedir}
+Libs: -L${libdir} -lodbcinst
+Libs.private: $(top_build_prefix)libltdl/libltdlc.la  -lpthread
