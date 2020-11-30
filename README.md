@@ -62,7 +62,7 @@ EOF
 
 ### package the content in a zip file to use as a lambda layer
 cd /opt  
-zip -r9 ~/pyodbc-layer.zip .
+zip -r9 /opt/pyodbc-layer.zip .
 
 ### copy zip file from docker container
 ```
